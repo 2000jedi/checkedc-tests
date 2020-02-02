@@ -23,7 +23,7 @@ checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) co
 
   int c checked[c_len];
   int d checked[d_len];
-  memset(c, 5, sizeof(int) * 5);
+  memset(c, 5, sizeof(int) * c_len);
   // will complain since 4 < 5 cannot be checked statically, even though the variables are all static values
   memcpy<int>(d, c, sizeof(int) * d_len);
   puts("Value of d[3]: ");

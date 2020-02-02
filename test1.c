@@ -26,5 +26,7 @@ checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) co
     // this indicates that there is no dynamic checking, memcpy succeeds and overflows
     // thus, it is unsuitable to check without dynamic_check function to ensure bound safety
   }
+  // an alternative solution to this problem here would to change the logic of memcpy, memset, etc.
+  // add dynamic bound checking for memcpy would solve this problem, with (probably) significant time consumption
   return 0;
 }
