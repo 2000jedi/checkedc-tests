@@ -15,6 +15,7 @@ checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) co
   array_ptr<int> b : byte_count(sizeof(int) * b_len) = malloc<int>(sizeof(int) * b_len);
   memset(a, 5, sizeof(int) * a_len);
   // must cause compiler complaint here, static check does not work here
+  // compiler will complain regardless of values for `a_len` and `b_len`
   memcpy<int>(b, a, sizeof(int) * a_len); // should cause an error here, either dynamically or statically, but not.
   putchar(b[3] + '0');
   putchar('\n');
