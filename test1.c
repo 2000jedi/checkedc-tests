@@ -10,9 +10,11 @@
 checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) count(argc)) {
   int a_len = 5;
   int b_len = 4;
-  array_ptr<int> a : count(a_len) = malloc<int>(sizeof(int) * a_len);
-  array_ptr<int> b : count(b_len) = malloc<int>(sizeof(int) * b_len);
+  // use byte_count here, count would cause problem
+  array_ptr<int> a : byte_count(sizeof(int) * a_len) = malloc<int>(sizeof(int) * a_len);
+  array_ptr<int> b : byte_count(sizeof(int) * b_len) = malloc<int>(sizeof(int) * b_len);
   memset(a, 5, sizeof(int) * a_len);
+  // must cause compiler complaint here, static check does not work here
   memcpy<int>(b, a, sizeof(int) * b_len);
   putchar(b[3] + '0');
   putchar('\n');
