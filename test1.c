@@ -9,7 +9,7 @@
  */
 checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) count(argc)) {
   int a_len = 5;
-  int b_len = 4;
+  int b_len = 5;
   // use byte_count here, count would cause problem
   array_ptr<int> a : byte_count(sizeof(int) * a_len) = malloc<int>(sizeof(int) * a_len);
   array_ptr<int> b : byte_count(sizeof(int) * b_len) = malloc<int>(sizeof(int) * b_len);
