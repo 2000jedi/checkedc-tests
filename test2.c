@@ -10,9 +10,6 @@ checked static void memcpy_checked(
   size_t src_len, 
   size_t n
   ) {
-    dynamic_check(dst_len >= n);
-    dynamic_check(src_len >= n);
-
     while (n--) { // direct copy of gcc's implementation of memcpy
       *dst = *src; // clang bug: cannot use *p++ while p is checked array pointer
       dst += 1;
