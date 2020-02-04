@@ -10,11 +10,16 @@ checked static void memcpy_checked(
   size_t src_len, 
   size_t n
   ) {
+    for (int i=0; i < n; ++i) {
+      dst[i] = src[i];
+    }
+    /*
     while (n--) { // direct copy of gcc's implementation of memcpy
       *dst = *src; // clang bug: cannot use *p++ while p is checked array pointer
-      dst += 1;
+      dst += 1;    // this would still be a problem as bound information is not updated.
       src += 1;
     }
+    */
   }
 
 /**
@@ -29,7 +34,7 @@ checked int main(int argc, char** argv : itype(array_ptr<nt_array_ptr<char>>) co
   memset(a, 8, sizeof(int) * a_len);
   // must cause compiler complaint here, static check does not work here
   // compiler will complain regardless of values for `a_len` and `b_len`
-  memcpy_checked(b, a, b_len, a_len, b_len); // should cause an error here, either dynamically or statically, but not.
+  memcpy_checked(b, a, b_len, a_len, a_len); // should cause an error here, either dynamically or statically, but not.
   putchar(b[3] + '0');
   putchar('\n');
   unchecked {
