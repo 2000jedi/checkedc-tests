@@ -8,7 +8,7 @@ _Unchecked void pc(char p) {
   putchar(p);
 }
 
-_Checked int foo(int * checked_array : itype(_Array_ptr<int>) count(len), size_t len){
+_Checked int foo(_Array_ptr<int> checked_array : count(len), size_t len){
 	pc('F');
   pc('o');
   pc('o');
@@ -30,8 +30,8 @@ int main(int argc, char** argv) {
   
   /* Directly using bounds cast inside function does not work */
   //#if 0
-  //foo(_Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
-  //foo(_Assume_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
+  foo(_Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
+  foo(_Assume_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
   //#endif
   
   /* Assigning to a new variable does not work */
