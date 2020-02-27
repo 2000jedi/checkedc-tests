@@ -31,15 +31,12 @@ int main(int argc, char** argv) {
   /* Directly using bounds cast inside function does not work */
   //#if 0
   foo(_Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
-  foo(_Assume_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
   //#endif
   
   /* Assigning to a new variable does not work */
   //#if 0
   _Array_ptr<int> b : count(l) = _Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l));
-  _Array_ptr<int> c : count(l) = _Assume_bounds_cast<_Array_ptr<int>>(a, count(l));
   foo(b, l);
-  foo(c, l);
   //#endif
   
   return 0;
