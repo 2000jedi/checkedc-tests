@@ -1,9 +1,7 @@
-//#include <stdchecked.h>
-//#include <stdio_checked.h>
-//#include <string_checked.h>
-//#include <stdlib_checked.h>
+#include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+
 _Unchecked void pc(char p) {
   putchar(p);
 }
@@ -29,15 +27,17 @@ int main(int argc, char** argv) {
   size_t l = 4;
   
   /* Directly using bounds cast inside function does not work */
-  //#if 0
+  #if 0
   foo(_Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l)), l);
-  //#endif
+  #endif
   
-  /* Assigning to a new variable does not work */
-  //#if 0
+  /* Assigning to a new variable does work */
+  #if 1
   _Array_ptr<int> b : count(l) = _Dynamic_bounds_cast<_Array_ptr<int>>(a, count(l));
   foo(b, l);
-  //#endif
+  #endif
+	
+  /* Although not shown in the test, cast of Checked C behaves the same on _Assume_bounds_cast */
   
   return 0;
 }
