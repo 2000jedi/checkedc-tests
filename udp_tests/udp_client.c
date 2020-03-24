@@ -44,7 +44,7 @@ int main() {
     printf("Hello message sent.\n");
     
     /* Recevice message from the server socket, tests udp_input() */
-    n = recvfrom(sockfd, buffer, BUFFSIZE, 0,
+    n = recvfrom(sockfd, buffer, BUFFSIZE, MSG_WAITALL,
                     (struct sockaddr *) &servaddr, &len);
     buffer[n] = '\0';
     printf("Server : %s\n", buffer);

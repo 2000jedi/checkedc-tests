@@ -46,7 +46,7 @@ int main(int argc, char *argv[]) {
     }
 
     /* Recevice message from the client socket, tests udp_input() */
-    n = recvfrom(sockfd, buffer, BUFFSIZE,  0,
+    n = recvfrom(sockfd, buffer, BUFFSIZE, MSG_WAITALL,
                     (struct sockaddr *) &cliaddr, &len);
     buffer[n] = '\0';   /* eos */
     printf("Client : %s\n", buffer);
