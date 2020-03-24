@@ -21,7 +21,7 @@
 int main() {
     int sockfd, n, len;
     char buffer[BUFFSIZE];
-    char *msg = "Messgae sent from client";
+    char *msg = "Message sent from client";
     struct sockaddr_in servaddr;
   
     /* Creating socket file descriptor */
@@ -47,7 +47,7 @@ int main() {
     n = recvfrom(sockfd, buffer, BUFFSIZE, MSG_WAITALL,
                     (struct sockaddr *) &servaddr, &len);
     buffer[n] = '\0';
-    printf("Server : %s\n", buffer);
+    printf("Client : %s\n", buffer);
   
     close(sockfd);
     return 0;
