@@ -21,7 +21,7 @@
 int main(int argc, char *argv[]) {
     int sockfd, len, n;
     char buffer[BUFFSIZE];
-    char *msg = "Message from server";
+    char *msg = "Message received from server";
     struct sockaddr_in servaddr, cliaddr;
       
     /* Creating socket file descriptor */
@@ -45,6 +45,8 @@ int main(int argc, char *argv[]) {
         exit(EXIT_FAILURE);
     }
 
+    len = sizeof(cliaddr);
+
     /* Recevice message from the client socket, tests udp_input() */
     n = recvfrom(sockfd, buffer, BUFFSIZE, MSG_WAITALL,
                     (struct sockaddr *) &cliaddr, &len);
@@ -54,7 +56,7 @@ int main(int argc, char *argv[]) {
     /* Send message to client socket, tests udp_output() */
     sendto(sockfd, (const char *)msg, strlen(msg), 0,
                         (const struct sockaddr *) &cliaddr, sizeof(cliaddr));
-    printf("Hello message sent.\n");
+    printf("Server : Message sent to client\n");
 
     return 0;
 }
