@@ -21,7 +21,7 @@
 int main() {
     int sockfd, n, len;
     char buffer[BUFFSIZE];
-    char *msg = "Messgae received from client";
+    char *msg = "Messgae sent from client";
     struct sockaddr_in servaddr;
   
     /* Creating socket file descriptor */
