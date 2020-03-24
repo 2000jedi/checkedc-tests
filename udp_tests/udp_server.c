@@ -21,7 +21,7 @@
 int main(int argc, char *argv[]) {
     int sockfd, len, n;
     char buffer[BUFFSIZE];
-    char *msg = "Message received from server";
+    char *msg = "Message sent from server";
     struct sockaddr_in servaddr, cliaddr;
       
     /* Creating socket file descriptor */
