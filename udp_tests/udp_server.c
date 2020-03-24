@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
     n = recvfrom(sockfd, buffer, BUFFSIZE, MSG_WAITALL,
                     (struct sockaddr *) &cliaddr, &len);
     buffer[n] = '\0';   /* eos */
-    printf("Client : %s\n", buffer);
+    printf("Server : %s\n", buffer);
 
     /* Send message to client socket, tests udp_output() */
     sendto(sockfd, (const char *)msg, strlen(msg), 0,
