@@ -11,7 +11,7 @@ WARM=10
 NUM_ROUNDS=10
 
 # Location of LMBench
-LMBENCH_DIR=$HOME/lmbench-3.0-a9/bin/amd64-freebsd12.1
+LMBENCH_DIR=$HOME/checekdc-tests/lmbench-3.0-a9/bin/amd64-freebsd12.1
 
 # Location of directories and files needed by test
 TMPDIR=$HOME/tmp
