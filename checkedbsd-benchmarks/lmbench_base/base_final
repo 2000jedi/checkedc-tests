@@ -1,0 +1,161 @@
+Running benchmark: Syscalls
+Simple syscall: 0.1884 microseconds
+Simple syscall: 0.1904 microseconds
+Simple syscall: 0.1905 microseconds
+Simple syscall: 0.1903 microseconds
+Simple syscall: 0.1877 microseconds
+Simple syscall: 0.1876 microseconds
+Simple syscall: 0.1876 microseconds
+Simple syscall: 0.1876 microseconds
+Simple syscall: 0.1904 microseconds
+Simple syscall: 0.1884 microseconds
+Done with benchmark: Syscalls
+Running benchmark: Read
+Simple read: 0.2596 microseconds
+Simple read: 0.2618 microseconds
+Simple read: 0.2601 microseconds
+Simple read: 0.2615 microseconds
+Simple read: 0.2615 microseconds
+Simple read: 0.2604 microseconds
+Simple read: 0.2616 microseconds
+Simple read: 0.2604 microseconds
+Simple read: 0.2617 microseconds
+Simple read: 0.2616 microseconds
+Done with benchmark: Read
+Running benchmark: Write
+Simple write: 0.2334 microseconds
+Simple write: 0.2349 microseconds
+Simple write: 0.2342 microseconds
+Simple write: 0.2332 microseconds
+Simple write: 0.2336 microseconds
+Simple write: 0.2327 microseconds
+Simple write: 0.2350 microseconds
+Simple write: 0.2352 microseconds
+Simple write: 0.2341 microseconds
+Simple write: 0.2350 microseconds
+Done with benchmark: Write
+Running benchmark: Open/Close
+Simple open/close: 1.8521 microseconds
+Simple open/close: 1.8545 microseconds
+Simple open/close: 1.8540 microseconds
+Simple open/close: 1.8546 microseconds
+Simple open/close: 1.8587 microseconds
+Simple open/close: 1.8556 microseconds
+Simple open/close: 1.8533 microseconds
+Simple open/close: 1.8579 microseconds
+Simple open/close: 1.8565 microseconds
+Simple open/close: 1.8640 microseconds
+Done with benchmark: Open/Close
+Running benchmark: Pipe
+Pipe latency: 4.5069 microseconds
+Pipe latency: 4.5381 microseconds
+Pipe latency: 4.4883 microseconds
+Pipe latency: 4.5743 microseconds
+Pipe latency: 4.5693 microseconds
+Pipe latency: 4.4623 microseconds
+Pipe latency: 4.4947 microseconds
+Pipe latency: 4.5297 microseconds
+Pipe latency: 4.5497 microseconds
+Pipe latency: 4.5467 microseconds
+Done with benchmark: Pipe
+Running benchmark: Unix Socket
+AF_UNIX sock stream latency: 4.8770 microseconds
+AF_UNIX sock stream latency: 4.9102 microseconds
+AF_UNIX sock stream latency: 4.8654 microseconds
+AF_UNIX sock stream latency: 4.8441 microseconds
+AF_UNIX sock stream latency: 4.8746 microseconds
+AF_UNIX sock stream latency: 4.8905 microseconds
+AF_UNIX sock stream latency: 4.8757 microseconds
+AF_UNIX sock stream latency: 4.9835 microseconds
+AF_UNIX sock stream latency: 4.9159 microseconds
+AF_UNIX sock stream latency: 4.8984 microseconds
+Done with benchmark: Unix Socket
+Running benchmark: UDP Socket
+UDP latency using 127.0.0.1: 8.1247 microseconds
+UDP latency using 127.0.0.1: 8.0020 microseconds
+UDP latency using 127.0.0.1: 8.0145 microseconds
+UDP latency using 127.0.0.1: 8.0310 microseconds
+UDP latency using 127.0.0.1: 8.0269 microseconds
+UDP latency using 127.0.0.1: 8.0348 microseconds
+UDP latency using 127.0.0.1: 8.0003 microseconds
+UDP latency using 127.0.0.1: 8.0308 microseconds
+UDP latency using 127.0.0.1: 8.0015 microseconds
+UDP latency using 127.0.0.1: 7.9789 microseconds
+kill: 1381: No such process
+Done with benchmark: UDP Socket
+Running benchmark: TCP Socket
+TCP latency using 127.0.0.1: 8.4815 microseconds
+TCP latency using 127.0.0.1: 8.5694 microseconds
+TCP latency using 127.0.0.1: 8.6098 microseconds
+TCP latency using 127.0.0.1: 8.5803 microseconds
+TCP latency using 127.0.0.1: 8.5342 microseconds
+TCP latency using 127.0.0.1: 8.6172 microseconds
+TCP latency using 127.0.0.1: 8.6167 microseconds
+TCP latency using 127.0.0.1: 8.6601 microseconds
+TCP latency using 127.0.0.1: 8.6415 microseconds
+TCP latency using 127.0.0.1: 8.6232 microseconds
+kill: 1429: No such process
+Done with benchmark: TCP Socket
+Running benchmark: Pipe BW
+Pipe bandwidth: 10721.03 MB/sec
+Pipe bandwidth: 10557.98 MB/sec
+Pipe bandwidth: 10674.98 MB/sec
+Pipe bandwidth: 10730.15 MB/sec
+Pipe bandwidth: 10665.48 MB/sec
+Pipe bandwidth: 10723.46 MB/sec
+Pipe bandwidth: 10650.40 MB/sec
+Pipe bandwidth: 10663.17 MB/sec
+Pipe bandwidth: 10553.49 MB/sec
+Pipe bandwidth: 10747.00 MB/sec
+Done with benchmark: Pipe BW
+Running benchmark: Unix BW
+AF_UNIX sock stream bandwidth: 1676.90 MB/sec
+AF_UNIX sock stream bandwidth: 1677.18 MB/sec
+AF_UNIX sock stream bandwidth: 1683.27 MB/sec
+AF_UNIX sock stream bandwidth: 1693.79 MB/sec
+AF_UNIX sock stream bandwidth: 1679.43 MB/sec
+AF_UNIX sock stream bandwidth: 1686.62 MB/sec
+AF_UNIX sock stream bandwidth: 1672.67 MB/sec
+AF_UNIX sock stream bandwidth: 1689.34 MB/sec
+AF_UNIX sock stream bandwidth: 1673.10 MB/sec
+AF_UNIX sock stream bandwidth: 1682.84 MB/sec
+Done with benchmark: Unix BW
+Running benchmark: File BW
+8.39 15068.45
+8.39 14985.60
+8.39 14336.78
+8.39 15123.69
+8.39 15084.41
+8.39 15099.49
+8.39 15093.46
+8.39 14944.08
+8.39 15081.40
+8.39 15069.36
+Done with benchmark: File BW
+Running benchmark: TCP BW
+0.065536 9565.19 MB/sec
+0.065536 9580.79 MB/sec
+0.065536 9545.03 MB/sec
+0.065536 9319.85 MB/sec
+0.065536 9338.70 MB/sec
+0.065536 9515.85 MB/sec
+0.065536 9507.20 MB/sec
+0.065536 8520.75 MB/sec
+0.065536 9400.32 MB/sec
+0.065536 9494.36 MB/sec
+kill: 1601: No such process
+Done with benchmark: TCP BW
+Running benchmark: UDP BW
+bind: Address already in use
+socket UDP bandwidth using 127.0.0.1: 98831.33 MB/sec
+socket UDP bandwidth using 127.0.0.1: 99340.98 MB/sec
+socket UDP bandwidth using 127.0.0.1: 99506.28 MB/sec
+socket UDP bandwidth using 127.0.0.1: 97994.29 MB/sec
+socket UDP bandwidth using 127.0.0.1: 95609.24 MB/sec
+socket UDP bandwidth using 127.0.0.1: 98637.16 MB/sec
+socket UDP bandwidth using 127.0.0.1: 97928.23 MB/sec
+socket UDP bandwidth using 127.0.0.1: 99142.94 MB/sec
+socket UDP bandwidth using 127.0.0.1: 97114.47 MB/sec
+socket UDP bandwidth using 127.0.0.1: 98418.32 MB/sec
+kill: 1663: No such process
+Done with benchmark: UDP BW
