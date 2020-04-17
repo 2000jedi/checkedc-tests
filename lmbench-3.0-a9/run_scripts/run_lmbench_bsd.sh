@@ -64,6 +64,13 @@ do
 done
 echo "Done with benchmark: Write"
 
+echo "Running benchmark: Open/Close"
+for i in $(seq 1 $NUM_ROUNDS)
+do
+    OUTFILE=$FSDIR/openClose_$TIMESTAMP
+    $LMBENCH_DIR/lat_syscall -W $WARM -N $REPS open 2>&1 | tee -a $OUTFILE
+done
+echo "Done with benchmark: Open/Close"
 
 echo "Running benchmark: Pipe"
 for i in $(seq 1 $NUM_ROUNDS)
