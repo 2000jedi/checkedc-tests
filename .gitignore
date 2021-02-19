@@ -54,3 +54,7 @@ dkms.conf
 test0
 test1
 test2
+test3
+test4
+test_dynamic
+test_call
