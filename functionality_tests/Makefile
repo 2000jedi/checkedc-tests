@@ -1,6 +1,9 @@
 CC = /opt/checkedc/build/bin/clang
 CFLAGS = -O0 -g -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -Wno-nullability-completeness
 
+bound: bound.c
+	$(CC) $(CFLAGS) -o bound bound.c
+
 fp: fp.c
 	$(CC) $(CFLAGS) -o fp fp.c
 
@@ -31,5 +34,5 @@ dynamic: dynamic.c
 	$(CC) $(CFLAGS) -o dynamic dynamic.c
 
 clean:
-	-rm test0 test1 test2 test3 test4 dynamic call constqual scope fp
+	-rm test0 test1 test2 test3 test4 dynamic call constqual scope fp bound
 	-rm -r *.o *.dSYM
