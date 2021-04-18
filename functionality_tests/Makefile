@@ -1,5 +1,5 @@
 CC = /opt/checkedc/build/bin/clang
-CFLAGS = -O0 -g -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -Wno-nullability-completeness
+CFLAGS = -O2 -g -I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include -L/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/lib -Wno-nullability-completeness
 
 bound: bound.c
 	$(CC) $(CFLAGS) -o bound bound.c
